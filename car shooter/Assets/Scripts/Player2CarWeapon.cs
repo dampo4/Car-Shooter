@@ -26,6 +26,6 @@ public class Player2CarWeapon : MonoBehaviour
 
         bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * force;
 
-        Destroy(bullet, 2.0f);
+        Destroy(bullet, 3.0f);
     }
 }

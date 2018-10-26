@@ -9,10 +9,11 @@ public class Player2BehaviourScript : MonoBehaviour {
     public float currentHealth;
     public Transform healthBar;
     public Slider healthFill;
+
     public float healthBarYOffset = 2;
 
     void Start () {
-        maxHealth = 100;
+        maxHealth = 200;
         currentHealth = maxHealth;
 	}
 	
@@ -32,12 +33,13 @@ public class Player2BehaviourScript : MonoBehaviour {
             Player1CarWeapon script = player.GetComponent<Player1CarWeapon>();
             currentHealth = currentHealth - script.damage;
             healthFill.value = currentHealth / maxHealth;
+ 
         }
     }
     private void PositionHealthBar()
     {
         Vector3 currentPos = transform.position;
         healthBar.position = new Vector3(currentPos.x, currentPos.y + healthBarYOffset, currentPos.z);
-        healthBar.LookAt(Camera.main.transform);
+        //healthBar.LookAt(Camera.main.transform);
     }
 }

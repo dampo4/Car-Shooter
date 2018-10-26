@@ -12,10 +12,12 @@ public class Player1BehaviourScript : MonoBehaviour
     public Slider healthFill;
     public float healthBarYOffset = 2;
     public Camera Player2Cam;
+    public Transform healthBar2;
+    public Slider healthFill2;
 
     void Start()
     {
-        maxHealth = 100;
+        maxHealth = 200;
         currentHealth = maxHealth;
     }
 
@@ -36,12 +38,13 @@ public class Player1BehaviourScript : MonoBehaviour
             Player2CarWeapon script = player.GetComponent<Player2CarWeapon>();
             currentHealth = currentHealth - script.damage;
             healthFill.value = currentHealth / maxHealth;
+            healthFill2.value = currentHealth / maxHealth;
         }
     }
     private void PositionHealthBar()
     {
         Vector3 currentPos = transform.position;
         healthBar.position = new Vector3(currentPos.x, currentPos.y + healthBarYOffset, currentPos.z);
-        healthBar.LookAt(Player2Cam.transform);
+        //healthBar.LookAt(Player2Cam.transform);
     }
 }

@@ -11,7 +11,7 @@ public class Player2RotateGun : MonoBehaviour {
 	// Update is called once per frame
     void Update()
     {
-        var x = Input.GetAxis("JoyHorizontal") * 10;
+        var x = Input.GetAxis("Turret") * 3;
         transform.Rotate(0, x, 0);
 
 
