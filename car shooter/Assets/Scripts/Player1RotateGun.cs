@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rotateGun : MonoBehaviour {
+public class Player1RotateGun : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		

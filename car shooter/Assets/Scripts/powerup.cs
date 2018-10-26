@@ -6,7 +6,7 @@ public class powerup : MonoBehaviour {
 
 	void OnTriggerEnter (Collider tag)
 	{
-		if (tag.CompareTag ("Player")) {
+		if (tag.CompareTag ("Player1") || tag.CompareTag("Player2")) {
 			{
 				Pickup (tag);
 			}
@@ -14,7 +14,16 @@ public class powerup : MonoBehaviour {
 	}
 	void Pickup(Collider player)
 	{
-        CarWeapon script = player.GetComponent<CarWeapon>();
-        script.damage *= 2;
+        if (player.name == "Player1")
+        {
+            Player1CarWeapon script = player.GetComponent<Player1CarWeapon>();
+            script.damage *= 2;
+        }
+        else
+        {
+            Player2CarWeapon script = player.GetComponent<Player2CarWeapon>();
+            script.damage *= 2;
+        }
+
 	}
 }
