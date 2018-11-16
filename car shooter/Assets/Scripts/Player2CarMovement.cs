@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player2CarMovement : MonoBehaviour {
-
+    public float speed = 6f;
 	// Use this for initialization
 	void Start () {
 		
@@ -12,8 +12,8 @@ public class Player2CarMovement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        var x = Input.GetAxis("JoyHorizontal") * Time.deltaTime * 150.0f;
-        var z = Input.GetAxis("JoyVertical") * Time.deltaTime * 10.0f;
+        var x = Input.GetAxis("JoyHorizontal") * Time.deltaTime * 100.0f;
+        var z = Input.GetAxis("JoyVertical") * Time.deltaTime * speed;
 
         transform.Rotate(0, x, 0);
         transform.Translate(0, 0, z);

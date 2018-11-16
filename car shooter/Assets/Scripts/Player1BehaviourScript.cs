@@ -12,8 +12,6 @@ public class Player1BehaviourScript : MonoBehaviour
     public Slider healthFill;
     public float healthBarYOffset = 2;
     public Camera Player2Cam;
-    public Transform healthBar2;
-    public Slider healthFill2;
 
     void Start()
     {
@@ -23,7 +21,11 @@ public class Player1BehaviourScript : MonoBehaviour
 
     void Update()
     {
-        PositionHealthBar();
+        healthFill.value = currentHealth / maxHealth;
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
@@ -38,13 +40,7 @@ public class Player1BehaviourScript : MonoBehaviour
             Player2CarWeapon script = player.GetComponent<Player2CarWeapon>();
             currentHealth = currentHealth - script.damage;
             healthFill.value = currentHealth / maxHealth;
-            healthFill2.value = currentHealth / maxHealth;
         }
     }
-    private void PositionHealthBar()
-    {
-        Vector3 currentPos = transform.position;
-        healthBar.position = new Vector3(currentPos.x, currentPos.y + healthBarYOffset, currentPos.z);
-        //healthBar.LookAt(Player2Cam.transform);
-    }
+
 }

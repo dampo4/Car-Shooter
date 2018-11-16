@@ -18,7 +18,6 @@ public class Player2BehaviourScript : MonoBehaviour {
 	}
 	
 	void Update () {
-        PositionHealthBar();
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
@@ -35,11 +34,5 @@ public class Player2BehaviourScript : MonoBehaviour {
             healthFill.value = currentHealth / maxHealth;
  
         }
-    }
-    private void PositionHealthBar()
-    {
-        Vector3 currentPos = transform.position;
-        healthBar.position = new Vector3(currentPos.x, currentPos.y + healthBarYOffset, currentPos.z);
-        //healthBar.LookAt(Camera.main.transform);
     }
 }

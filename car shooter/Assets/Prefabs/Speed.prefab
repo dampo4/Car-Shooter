@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33781794480539110}
   - component: {fileID: 23619503034914432}
   - component: {fileID: 135632999734448060}
-  - component: {fileID: 114594060925703994}
+  - component: {fileID: 114519806889927382}
   m_Layer: 0
-  m_Name: BulletDamage
-  m_TagString: Untagged
+  m_Name: Speed
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -85,7 +85,7 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1092659116590162}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114594060925703994
+--- !u!114 &114519806889927382
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1092659116590162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ef4a16386ea0a242a93c650bfba891f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a1c62baebcfff5419c8c82901c24f50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!135 &135632999734448060

@@ -8,6 +8,8 @@ TagManager:
   - Player1Bullet
   - Player1
   - Player2Bullet
+  - Player1cam
+  - PowerUp
   layers:
   - Default
   - TransparentFX
