@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player2BehaviourScript : MonoBehaviour {
 
@@ -21,6 +22,7 @@ public class Player2BehaviourScript : MonoBehaviour {
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            SceneManager.LoadScene("GameOver1");
         }
 	}
     private void OnCollisionEnter(Collision collision)
