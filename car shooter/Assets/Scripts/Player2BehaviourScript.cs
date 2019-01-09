@@ -14,7 +14,7 @@ public class Player2BehaviourScript : MonoBehaviour {
     public float healthBarYOffset = 2;
 
     void Start () {
-        maxHealth = 200;
+        maxHealth = 400;
         currentHealth = maxHealth;
 	}
 	

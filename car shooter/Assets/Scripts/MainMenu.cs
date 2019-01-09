@@ -9,4 +9,10 @@ public class MainMenu : MonoBehaviour {
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void Controls()
+    {
+        SceneManager.LoadScene("Controls");
+    }
+
 }

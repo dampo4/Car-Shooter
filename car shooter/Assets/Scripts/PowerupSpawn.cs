@@ -7,9 +7,9 @@ using Random = UnityEngine.Random;
 public class PowerupSpawn : MonoBehaviour {
     System.Random rnd = new System.Random();
     public GameObject[] types = new GameObject[3];
-    private GameObject[] powerups = new GameObject[8];
-    private int[] quadrant = new int[8] { 0, 1, 2, 3, 4, 5, 6, 7 };
-    private Vector3[] pos = new Vector3[8];
+    private GameObject[] powerups = new GameObject[4];
+    private int[] quadrant = new int[4] { 0, 1, 2, 3};
+    private Vector3[] pos = new Vector3[4];
     GameObject[] activePowerups;
     bool isDone = false;
     private IEnumerator coroutine;
@@ -111,7 +111,7 @@ public class PowerupSpawn : MonoBehaviour {
 
     void GeneratePos()
     {
-        for (int i = 0; i < 8; i++)
+        for (int i = 0; i < 4; i++)
         {
             float x = 0;
             float z = 0;
@@ -119,7 +119,7 @@ public class PowerupSpawn : MonoBehaviour {
             float xMax = 25f;
             float zMin = -25f;
             float zMax = 25f;
-            if (i == 0 | i == 1)
+            if (i == 0)
             {
                 do
                 {
@@ -128,7 +128,7 @@ public class PowerupSpawn : MonoBehaviour {
                 }
                 while (x < -10 && x > -20 && z > 10 && z < 20 );
             }
-            else if (i == 2 | i == 3)
+            else if (i == 1)
             {
                 do
                 {
@@ -138,7 +138,7 @@ public class PowerupSpawn : MonoBehaviour {
                 while (x > 10 && x < 20 && z > 10 && z < 20);
 
             }
-            else if (i == 4 | i == 5)
+            else if (i == 2)
             {
                 do
                 {
@@ -148,7 +148,7 @@ public class PowerupSpawn : MonoBehaviour {
                 while (x < -10 && x > -20 && z < -10 && z > -20);
 
             }
-            else if (i == 6 | i == 7)
+            else if (i == 3)
             {
                 do
                 {

@@ -15,7 +15,7 @@ public class Player1BehaviourScript : MonoBehaviour
 
     void Start()
     {
-        maxHealth = 200;
+        maxHealth = 400;
         currentHealth = maxHealth;
     }
 
