@@ -13,10 +13,12 @@ public class Player2CarMovement : MonoBehaviour {
 	void Update () {
 
         var x = Input.GetAxis("JoyHorizontal") * Time.deltaTime * 100.0f;
-        var z = Input.GetAxis("JoyVertical") * Time.deltaTime * speed;
+        var z = Input.GetAxis("JoyGo") * Time.deltaTime * speed;
+
+        transform.Translate(0, 0, z);
 
         transform.Rotate(0, x, 0);
-        transform.Translate(0, 0, z);
+
         
 
     }
