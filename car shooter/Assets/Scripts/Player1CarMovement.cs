@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Player1CarMovement : MonoBehaviour {
-    public float speed = 6f;
+    public float speed = 1f;
     // Use this for initialization
     void Start () {
 
